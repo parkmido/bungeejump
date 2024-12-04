@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- k -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Dongle&family=Gowun+Batang&family=Gowun+Dodum&family=Noto+Serif+KR&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>번지점프.</title>
+
+    <style>
+        
+        .body {
+            background-color: white;
+            margin: 10%;
+            height: 100%;}
+        .container{
+            display: grid;
+            padding: 100px;
+
+            grid-template-columns: 50% 30%;
+            grid-gap: 50px;} 
+        .logo {
+            grid-column: 1 / 2;
+            object-position: top;}    
+        .feed {
+            grid-column: 2 / 3;
+            text-align: justify;;
+            padding: 50px;
+
+            border-style: solid;
+            border-width: 1.5px;
+            font-size: 22px;
+
+            font-family: "Gowun Batang", serif;
+            font-weight: 400;
+            font-style: normal;}
+            .btu {
+                padding: auto 20px;
+                min-height: 30px;
+                font-size: 16px;
+                color: rgb(255, 255, 255);
+                text-align: left;
+
+                border-style: solid;
+                border-width: 0px;
+                background-color: rgb(0, 0, 0);
+
+                cursor: pointer;
+                transition: #e9e9e9 0.2s ease;
+
+                font-family: "Gowun Batang", serif;
+                font-weight: 400;
+                font-style: normal;}
+            .btu:hover {
+                background-color: #ffffff;
+                border: 1px solid black;
+                color: black;}
+        
+   </style>
+</head>
+
+<body>
+    <div class="container">
+        
+     <div class="logo">
+     <a href="index.html" target='_self'>
+        <img src="logofeed1.png" alt="번지점프" style="width: 100%; height: auto; object-fit: contain top;"></a></div>
+
+        <div class="feed">
+            <header>critic feed</header>
+
+            <p><button class="btu" onclick=
+                "window.open('https://bungeejump.notion.site/1519e22c54e180f18343f1eeee6dfb7a?pvs=4','_blank')">
+                왈라드 라드의 혼이 담긴 구라 : 귄터 안더스의 매체 미학의 관점을 중심으로, 김계엄</button></p>
+
+            <p><button class="btu" onclick=
+                "window.open('https://bungeejump.notion.site/1509e22c54e180848ac6c342b1ffcdae?pvs=4','_blank')">
+                우리는 모든 것을 볼 수 없지만, 말하자면 많은 것을 듣고 있다 《사울의 아들》, 라즐로 네메스, 2015, 김무스</button></p>
+            
+            <p><button class="btu" onclick=
+                "window.open('https://bungeejump.notion.site/14f9e22c54e18033a358ea6ec2ae5ec6?pvs=4','_blank')">
+                경험예술, 사카타 긴토키</button></p>
+
+            <p><button class="btu" onclick= 
+            "window.open('https://www.notion.so/bungeejump/14f9e22c54e180e9a1eeece531bcdb7e?pvs=4','_blank')"> 
+            화가 나지 않는 지금, 집나온김기모</button></p>
+
+        </div>
+
+    </div>
+</body>
+</html>

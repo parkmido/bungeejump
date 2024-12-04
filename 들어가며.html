@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>들어가며</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;}
+
+        .slider {
+            position: relative;
+            width: 80%;
+            max-width: 1000px;
+            height: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);}
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;}
+            
+        .slide {
+            min-width: 100%;
+            transition: opacity 0.5s ease-in-out;}
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;}
+
+        .buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);}
+
+        .button {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: white;
+            border: none;
+            padding: 14px;
+            cursor: pointer;
+            border-radius: 45%;
+            font-size: 30px;
+            transition: background-color 0.3s;}
+
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.8);}
+
+    .home {
+        position: absolute;
+        bottom: 8%; 
+        left: 88%;}
+
+    .btu2 {
+        background-color: #000000; 
+        color: rgb(255, 255, 255);  
+        padding: 5px 7px; 
+        cursor: pointer;
+
+        font-size: 16px; 
+        transition: #e9e9e9 0.2s ease;
+    
+        font-family: "Noto Serif KR", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;}
+
+    .btu2:hover {
+        background-color: #ffffff;
+        border: 1px solid black;
+        color: black;}
+
+    </style>
+
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="들어가며 png/들어가며01.png" alt="Image 1"></div>
+            <div class="slide"><img src="들어가며 png/들어가며02.png" alt="Image 2"></div>
+            <div class="slide"><img src="들어가며 png/들어가며03.png" alt="Image 3"></div>
+            <div class="slide"><img src="들어가며 png/들어가며04.png" alt="Image 3"></div>
+            <div class="slide"><img src="들어가며 png/들어가며05.png" alt="Image 3"></div>
+            <div class="slide"><img src="들어가며 png/들어가며06.png" alt="Image 3"></div>
+            <div class="slide"><img src="들어가며 png/들어가며07.png" alt="Image 3"></div>
+            <div class="slide"><img src="들어가며 png/들어가며08.png" alt="Image 3"></div>
+            <div class="slide"><img src="들어가며 png/들어가며09.png" alt="Image 3"></div>
+            <div class="slide"><img src="들어가며 png/들어가며10.png" alt="Image 3"></div>
+            <div class="slide"><img src="들어가며 png/들어가며11.png" alt="Image 3"></div>
+            <div class="slide"><img src="들어가며 png/들어가며12.png" alt="Image 3"></div>
+            <div class="slide"><img src="들어가며 png/들어가며13.png" alt="Image 13"></div>
+        </div>
+        <div class="buttons">
+            <button class="button prev">❮</button>
+            <button class="button next">❯</button>
+        </div>
+    </div>
+
+    <div class="home">
+        <button class="btu2" onclick= 
+        "window.open('index.html','_self')">번지점프.</button>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slideCount = document.querySelectorAll('.slide').length;
+        let currentIndex = 0;
+
+        const nextButton = document.querySelector('.next');
+        const prevButton = document.querySelector('.prev');
+
+        function updateSlidePosition() {
+            const offset = -currentIndex * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slideCount;
+            updateSlidePosition();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+            updateSlidePosition();
+        });
+    </script>
+</body>
+</html>

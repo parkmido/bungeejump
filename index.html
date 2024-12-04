@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>번지점프.</title>
+
+    <style>
+        .body{
+            padding: 8rem;
+            background-color: white;}
+
+        .container{
+            display: grid;
+            grid-template-columns: 15% 70% 15%;
+            grid-gap: 10px;
+            
+            font-family: "Noto Serif KR", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;}
+
+        .item2 {
+            grid-column: 2 / 3;
+            width: 800px;
+            padding: 60px;
+            text-align: center;
+            font-size: 20px;} 
+               
+            .btu {
+                padding: auto;
+                min-height: 30px;
+                font-size: 17px;
+                color: rgb(206, 206, 206);
+
+                border-width: 0px;
+                background: none;
+                border-bottom: 2px dotted rgb(206, 206, 206);
+
+                cursor: pointer;
+                transition: #e9e9e9 0.2s ease;
+            
+                font-family: "Noto Serif KR", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;}
+
+            .btu:hover {
+                background-color: none;
+                border-bottom: 2px dotted rgb(38, 99, 243);
+                color: rgb(38, 99, 243);}
+        
+            .btu2 {
+                padding: 4px 8px;
+                min-height: 30px;
+                font-size: 15px;
+                color: rgb(255, 255, 255);
+
+                border-width: 0px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 8px;
+                border: 1px solid black;
+
+                cursor: pointer;
+                transition: #e9e9e9 0.2s ease;
+            
+                font-family: "Noto Serif KR", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;}
+
+            .btu2:hover {
+                background-color: #000000;
+                border: 1px solid rgb(0, 0, 0);
+                color: rgb(255, 255, 255);}
+
+        .item3 {
+            grid-column: 3 / 3;
+            width: 800px;
+            padding: 60px;
+            text-align: center;
+            font-size: 15px;}
+        
+            .item3 img {
+                width: 20%;
+                height: auto;
+                object-fit: contain;
+                cursor: pointer;}
+
+            
+            .popup-background {
+                display: none;
+                position: fixed; /* 화면 전체에 고정 */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 9999;}
+
+            .popup {
+                position: absolute; 
+                top: 50%;
+                left: 50%; 
+                transform: translate(-50%, -50%); 
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                width: 80%;
+                max-width: 500px;
+                max-height: 80%;
+                overflow-y: auto;}
+
+            .popup img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+
+            .close-btn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: #ffffff;
+                color: rgb(177, 177, 177);
+                border: none;
+                border-radius: 5px;
+                padding: 5px 10px;
+                cursor: pointer;
+                font-size: 14px;}
+
+        
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="item2">
+                <h1>번지점프.</h1>
+                 <br>
+                    <p> 존재하던 비평의 형식으로서의 위상을 퇴고하고 </p>
+
+                    <p> 개인이라는 신화와 저자성을 폐지하며 익명의 커뮤니티로</p>
+
+                    <p>지금보다 새로운 유효함을 구축한다.</p>
+
+                    <p>기획자-운영자인 우리는 <button class="btu2" onclick="location.href='번지점프.html'">번지점프  ></button> 를 통해</p>
+
+                    <p>서로를 즉발적으로 <button class="btu" onclick="showPopup()">연결</button> 하는 고리들을 목격하고,</p>
+
+                    <p>우리의 <button class="btu2" onclick="location.href='자체연구프로젝트.html'">자체 연구 프로젝트  ></button> 를 통해</p> 
+
+                    <p>담론들을 더 세밀하게 살펴보고 기록화한다.</p>
+
+                    <p>또한 우리는 한국까지 유입되지 못한</p>
+
+                    <p><button class="btu2" onclick="location.href='해외예술논문.html'">해외 예술 논문  ></button> 을 번역하여 유통하며</p>
+
+                    <p>다양한 담론들이 야기될 수 있도록 제공한다.</p>
+
+                    <p>발화할 수밖에 없게된 비평의 언어들이</p>
+
+                    <p>자유롭게 세상 밖으로 도약할 수 있길 바라며</p>
+
+                    <P>비평가가 될 <button class="btu" onclick="alert('게시의 조건은 하나, 자신의 필명을 함께 기재할 것. \n그 외에는 자신에 대한 어떠한 정보도 게재하지 말 것. \n\n번지점프는 언제나 세상으로 도약할 당신의 글을 고대합니다. \n\n투고 이메일 : to.bungeejumper@gmail.com')"
+                        >당신의 글</button> 을 고대한다.</P>
+
+        </div>
+
+        <div id="popup-background" class="popup-background">
+            <div class="popup">
+                <img src="key.jpg" alt="팝업 이미지">
+                <button class="close-btn" onclick="closePopup()">닫기</button>
+            </div>
+
+        </div>
+    </div>    
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup-background').style.display = 'flex';}
+
+        function closePopup() {
+            console.log("Popup 닫힘 실행"); // 디버깅용
+            document.getElementById('popup-background').style.display = 'none';}
+    </script>
+
+</body>
+</html>
